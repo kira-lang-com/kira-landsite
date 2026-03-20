@@ -69,7 +69,7 @@ export function HeroSection() {
         <div className="mt-12 flex flex-col items-center gap-6 md:mt-14">
           <a
             href="#fast"
-            className="inline-flex items-center gap-3 rounded-[2rem] bg-gradient-to-b from-[#f38d5b] to-[#e45a32] px-10 py-5 text-2xl font-semibold text-white shadow-[0_24px_70px_-24px_rgba(228,90,50,0.8)] transition-transform duration-300 hover:-translate-y-1 md:px-20 md:text-3xl"
+            className="inline-flex items-center gap-3 rounded-[2rem] bg-gradient-to-b from-[#f38d5b] to-[#e45a32] px-10 py-5 text-2xl font-semibold text-[#2f140d] shadow-[0_24px_70px_-24px_rgba(228,90,50,0.8)] transition-transform duration-300 hover:-translate-y-1 md:px-20 md:text-3xl"
           >
             Install
             <ChevronRight size={28} />
