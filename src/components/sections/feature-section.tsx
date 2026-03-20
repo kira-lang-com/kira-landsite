@@ -14,7 +14,11 @@ export function FeatureSection({ section }: FeatureSectionProps) {
         <p className="max-w-3xl text-xl leading-relaxed text-[#1d1d1f]/80 md:text-2xl">
           {section.description}
         </p>
-        <CodeBlock code={section.code} label={section.codeLabel} />
+        <CodeBlock
+          code={section.code}
+          label={section.codeLabel}
+          sourcePath={section.codeSource}
+        />
       </div>
     </section>
   );

@@ -12,6 +12,7 @@ export type Category = {
 export type FeatureSectionData = {
   code: string;
   codeLabel: string;
+  codeSource?: string;
   description: string;
   id: string;
   sectionClassName: string;
@@ -25,103 +26,112 @@ export type FooterGroup = {
 };
 
 export const navigationLinks: NavLink[] = [
-  { href: "#fast", label: "Docs" },
-  { href: "#open-source", label: "Community" },
-  { href: "#categories", label: "Packages" },
-  { href: "#expressive", label: "Blog" },
-  { href: "#install", label: "Install" },
+  { href: "#install", label: "Overview" },
+  { href: "#categories", label: "Getting Started" },
+  { href: "#fast", label: "Examples" },
+  { href: "#expressive", label: "Syntax" },
+  { href: "#open-source", label: "Open Source" },
 ];
 
 export const categories: Category[] = [
   {
-    icon: "cloud",
-    title: "Cloud Services",
+    icon: "terminal",
+    title: "Easy to read",
     description:
-      "Run performant services on Linux and deploy to the cloud with native execution.",
+      "Kira keeps everyday code straightforward: variables, functions, structs, and prints look close to how you would explain the program out loud.",
   },
   {
-    icon: "terminal",
-    title: "Command Line",
+    icon: "cloud",
+    title: "Easy to use",
     description:
-      "Create powerful CLI tools that are fast, memory safe, and highly portable.",
+      "You can start with tiny scripts and simple apps, then keep growing into packages, tooling, and native interop without switching languages.",
   },
   {
     icon: "cpu",
-    title: "Embedded",
+    title: "Easy to grow",
     description:
-      "Develop efficient, reliable firmware for devices like microcontrollers with zero-cost abstractions.",
+      "The same syntax scales from beginner-friendly examples to real projects like the pure-Kira Sokol triangle sample in this repo.",
   },
 ];
 
 export const categoryLinks: NavLink[] = [
-  { href: "#install", label: "iOS apps" },
-  { href: "#adaptable", label: "Windows apps" },
-  { href: "#open-source", label: "Machine Learning & AI" },
-  { href: "#categories", label: "Packages" },
+  { href: "#fast", label: "Hello world" },
+  { href: "#expressive", label: "Variables" },
+  { href: "#safe", label: "Structs" },
+  { href: "#adaptable", label: "Real app" },
 ];
 
 export const featureSections: FeatureSectionData[] = [
   {
     id: "fast",
-    title: "Fast",
-    subtitle: "Build with speed and performance.",
+    title: "Simple",
+    subtitle: "Small Kira programs read the way you expect.",
     description:
-      "Kira meets the most performance-critical needs while keeping code expressive and approachable. It compiles directly to native code and offers predictable memory management for serious production workloads.",
-    codeLabel: "Vectorized ASCII check",
-    code: String.raw`func isASCII(utf8: Span<SIMD16<UInt8>>) -> Bool {
-  // Vectorized check that a utf8 buffer is ASCII
-  let max = utf8.indices.reduce(into: SIMD16()) { $0 |= utf8[$1] }
-  return max.max() < 0x80
+      "You can start with plain values, clear types, and direct function bodies. The language does not force advanced syntax on simple tasks.",
+    codeLabel: "A tiny Kira program",
+    codeSource: "MyKiraProject/Sources/main.kira",
+    code: String.raw`@main
+function main() {
+    let x: Float = 12
+    let y = 12.0
+    let z = x + y
+    print(z)
+    return
 }`,
-    sectionClassName:
-      "bg-gradient-to-b from-white to-[#eef6f9]",
+    sectionClassName: "bg-gradient-to-b from-white to-[#eef6f9]",
   },
   {
     id: "expressive",
-    title: "Expressive",
-    subtitle: "Concise code. Powerful results.",
+    title: "Comfortable",
+    subtitle: "Mutation and output stay easy to follow.",
     description:
-      "Kira empowers you to write advanced code in a concise, readable syntax that still scales up to expert use cases. Its progressive disclosure keeps beginner-friendly ergonomics without capping what experienced developers can do.",
-    codeLabel: "CLI command example",
-    code: String.raw`@main struct Describe: ParsableCommand {
-  @Argument(help: "The values to describe.")
-  var values: [Double] = []
+      "When you need a mutable value, you declare one with \`var\` and update it directly. The language keeps the common path uncluttered.",
+    codeLabel: "Updating a value",
+    codeSource: "HelloKira/Sources/main.kira",
+    code: String.raw`var xy = 12.0
+print(xy)
 
-  mutating func run() {
-    values.sort()
-    let total = values.reduce(0, +)
-    print("Total: \(total)")
-  }
-}`,
+xy = 13.0
+print(xy)`,
     sectionClassName: "bg-[#eef6f9]",
   },
   {
     id: "safe",
-    title: "Safe",
-    subtitle: "Protect memory safety.",
+    title: "Structured",
+    subtitle: "Your data types look like your data.",
     description:
-      "Kira is designed to eliminate entire classes of bugs and vulnerabilities. Memory safety and data race safety are first-class features, making it easier to ship robust systems without bolting safety on later.",
-    codeLabel: "Transform builder",
-    code: String.raw`let transform = Affine2DTransformBuilder()
-  .translate([10.0, 20.0].span)
-  .rotate(30.0)
-  .build()`,
-    sectionClassName:
-      "bg-gradient-to-b from-[#eef6f9] to-[#f4e6d3]",
+      "Kira structs are direct and readable. You can name fields clearly and keep your types close to the problem you are solving.",
+    codeLabel: "A simple color type",
+    codeSource: "HelloKira/Sources/main.kira",
+    code: String.raw`@CStruct
+type hk_color {
+    var r: CFloat
+    var g: CFloat
+    var b: CFloat
+    var a: CFloat
+}`,
+    sectionClassName: "bg-gradient-to-b from-[#eef6f9] to-[#f4e6d3]",
   },
   {
     id: "adaptable",
-    title: "Adaptable",
-    subtitle: "From microcontrollers to servers.",
+    title: "Capable",
+    subtitle: "When you are ready, the same language scales up.",
     description:
-      "The same language can span embedded devices, kernels, backend systems, and desktop apps. Kira is built to feel at home in constrained environments just as much as in cloud services handling massive throughput.",
-    codeLabel: "Embedded UART setup",
-    code: String.raw`// Configure UART by direct register manipulation
-usart1.brr.modify { rw in
-  rw.raw.brr_field = 16_000_000 / 115_200
+      "The repo also includes a real graphics sample written in Kira. You can stay with friendly syntax and still grow into native app code when the project gets bigger.",
+    codeLabel: "Launching the Sokol sample",
+    codeSource: "SokolGfxKira/Sources/main.kira",
+    code: String.raw`@Main
+function main() {
+    print("Launching Sokol triangle (pure Kira)…")
+    sapp_run(desc: sapp_desc(
+        init_cb: on_init,
+        frame_cb: on_frame,
+        cleanup_cb: on_cleanup,
+        width: 800,
+        height: 600,
+        window_title: "Sokol Triangle (Kira)"))
 }`,
-    sectionClassName:
-      "border-t border-black/5 bg-[#f4e6d3]",
+    sectionClassName: "border-t border-black/5 bg-[#f4e6d3]",
   },
 ];
 
@@ -132,9 +142,9 @@ export const footerGroups: FooterGroup[] = [
   {
     title: "Tools",
     links: [
-      { href: "#install", label: "Kira Studio" },
-      { href: "#categories", label: "KiraPM" },
-      { href: "#fast", label: "Language Server" },
+      { href: "#install", label: "kira CLI" },
+      { href: "#categories", label: "examples" },
+      { href: "#open-source", label: "kira-lsp" },
     ],
   },
 ];

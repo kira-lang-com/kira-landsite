@@ -8,7 +8,7 @@ import { featureSections } from "@/data/site";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="bg-background text-foreground">
       <SiteNav />
       <main>
         <HeroSection />

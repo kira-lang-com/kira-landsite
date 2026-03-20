@@ -11,7 +11,7 @@ export function OpenSourceSection() {
           Open Source
         </h2>
         <p className="mx-auto mt-8 max-w-2xl text-2xl font-medium opacity-90 md:text-3xl">
-          Contribute, share ideas, and help shape where Kira goes next.
+          Explore the code, try the examples, and help shape where Kira goes next.
         </p>
 
         <div className="mt-12 flex flex-col items-center gap-5">
@@ -26,10 +26,10 @@ export function OpenSourceSection() {
             <ChevronRight size={18} />
           </a>
           <a
-            href="#categories"
+            href="#fast"
             className="text-xl font-bold text-white/90 underline decoration-white/40 underline-offset-8 transition-colors hover:text-white"
           >
-            Join the forums
+            Start with the easy examples
           </a>
         </div>
       </div>
