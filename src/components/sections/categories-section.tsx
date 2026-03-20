@@ -12,7 +12,7 @@ export function CategoriesSection() {
   return (
     <section id="categories" className="bg-[#f4e6d3] px-6 pb-32 pt-6 md:pt-10">
       <div className="mx-auto max-w-4xl">
-        <h2 className="font-display text-center text-4xl font-bold tracking-[-0.04em] text-[#1d1d1f] md:text-5xl">
+        <h2 className="font-display text-center text-4xl font-bold leading-[1.06] tracking-[0.001em] text-[#1d1d1f] md:text-5xl md:tracking-[0.003em]">
           Create using Kira
         </h2>
 

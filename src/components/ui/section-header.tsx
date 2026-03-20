@@ -6,7 +6,7 @@ type SectionHeaderProps = {
 export function SectionHeader({ title, subtitle }: SectionHeaderProps) {
   return (
     <div className="mb-8">
-      <h2 className="font-display text-5xl font-bold tracking-[-0.04em] text-[#1d1d1f] md:text-7xl">
+      <h2 className="font-display text-5xl font-bold leading-[1.04] tracking-[0.001em] text-[#1d1d1f] md:text-7xl md:leading-[1.02] md:tracking-[0.003em]">
         {title}
       </h2>
       <p className="mt-4 text-2xl font-semibold tracking-[-0.03em] text-[#1d1d1f]/80 md:text-3xl">

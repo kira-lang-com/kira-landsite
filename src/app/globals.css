@@ -17,9 +17,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sora);
-  --font-display: var(--font-space-grotesk);
-  --font-mono: var(--font-ibm-plex-mono);
+  --font-sans: var(--font-manrope), "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --font-display: var(--font-manrope), "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --font-mono: "IBM Plex Mono", "JetBrains Mono", ui-monospace, Menlo, Consolas, Monaco, "Courier New", monospace, serif;
 }
 
 html {
@@ -30,10 +30,7 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family:
-    var(--font-sora),
-    "Segoe UI",
-    sans-serif;
+  font-family: var(--font-sans);
   text-rendering: optimizeLegibility;
 }
 
@@ -55,15 +52,9 @@ a {
 }
 
 .font-display {
-  font-family:
-    var(--font-space-grotesk),
-    "Arial Narrow",
-    sans-serif;
+  font-family: var(--font-display);
 }
 
 .font-mono {
-  font-family:
-    var(--font-ibm-plex-mono),
-    "Cascadia Code",
-    monospace;
+  font-family: var(--font-mono);
 }

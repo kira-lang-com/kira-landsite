@@ -56,10 +56,10 @@ export function HeroSection() {
       <div className="absolute bottom-6 right-[10%] h-24 w-24 rounded-full bg-[#e45a32]/12 blur-3xl md:bottom-10 md:h-36 md:w-36" />
 
       <div className="relative z-10 mx-auto max-w-5xl pt-10 md:pt-14">
-        <p className="mb-6 inline-flex rounded-full border border-[#e2cca9] bg-white/55 px-4 py-2 text-sm font-semibold uppercase tracking-[0.25em] text-[#8e4a2d] shadow-[0_10px_30px_-20px_rgba(29,29,31,0.6)]">
+        <p className="mb-6 inline-flex rounded-full border border-[#e2cca9] bg-white/55 px-4 py-2 text-sm font-semibold uppercase tracking-[0.25em] text-[#8e4a2d] shadow-[0_0_18px_rgba(255,255,255,0.32)]">
           Language for builders
         </p>
-        <h1 className="balance-text font-display text-5xl font-bold leading-[0.98] tracking-[-0.06em] text-[#333] md:text-7xl">
+        <h1 className="balance-text font-display text-5xl font-bold leading-[1.03] tracking-[0.001em] text-[#333] md:text-7xl md:leading-[1.01] md:tracking-[0.003em]">
           Kira is the powerful, flexible, multiplatform programming language.
         </h1>
         <p className="mx-auto mt-8 max-w-2xl text-2xl font-medium text-[#1d1d1f]/70 md:text-3xl">

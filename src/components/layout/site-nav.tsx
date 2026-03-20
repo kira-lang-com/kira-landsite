@@ -17,12 +17,12 @@ export function SiteNav() {
             className="flex items-center gap-3 transition-opacity hover:opacity-70"
           >
             <KiraLogo />
-            <span className="font-display text-2xl font-semibold tracking-[-0.04em]">
+            <span className="font-display text-2xl font-bold tracking-[-0.04em]">
               Kira
             </span>
           </a>
 
-          <div className="hidden items-center gap-10 text-[15px] font-medium text-[#1d1d1f] md:flex">
+          <div className="hidden items-center gap-10 text-[15px] font-semibold text-[#1d1d1f] md:flex">
             {navigationLinks.map((link) => (
               <a
                 key={link.label}
@@ -52,7 +52,7 @@ export function SiteNav() {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="rounded-2xl bg-white/50 px-4 py-3 text-base font-medium"
+                  className="rounded-2xl bg-white/50 px-4 py-3 text-base font-semibold"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}

@@ -7,7 +7,7 @@ export function OpenSourceSection() {
       className="bg-gradient-to-b from-[#f4e6d3] to-[#7d6b9e] px-6 py-40 text-center text-white"
     >
       <div className="mx-auto max-w-4xl">
-        <h2 className="font-display text-6xl font-bold tracking-[-0.05em] md:text-8xl">
+        <h2 className="font-display text-6xl font-bold leading-[1.04] tracking-[0.001em] md:text-8xl md:tracking-[0.003em]">
           Open Source
         </h2>
         <p className="mx-auto mt-8 max-w-2xl text-2xl font-medium opacity-90 md:text-3xl">
