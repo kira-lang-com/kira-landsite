@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { KiraLogo } from "@/components/ui/kira-logo";
@@ -12,25 +13,22 @@ export function SiteNav() {
     <nav className="sticky top-0 z-50 border-b border-[#e2cca9]/40 bg-[#f4e6d3]/90 backdrop-blur-md">
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex h-16 items-center justify-between">
-          <a
-            href="#install"
+          <Link
+            href="/"
             className="flex items-center gap-3 transition-opacity hover:opacity-70"
           >
             <KiraLogo />
-            <span className="font-display text-2xl font-bold tracking-[-0.04em]">
-              
-            </span>
-          </a>
+          </Link>
 
           <div className="hidden items-center gap-10 text-[15px] font-semibold text-[#1d1d1f] md:flex">
             {navigationLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className="transition-opacity hover:opacity-60"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -71,7 +69,7 @@ export function SiteNav() {
             >
               <div className="flex flex-col gap-3">
                 {navigationLinks.map((link) => (
-                  <a
+                  <Link
                     key={link.label}
                     href={link.href}
                     className={`rounded-2xl bg-white/50 px-4 py-3 text-base font-semibold transition-all duration-300 ${
@@ -80,13 +78,15 @@ export function SiteNav() {
                         : "-translate-y-2 opacity-0"
                     }`}
                     style={{
-                      transitionDelay: isMenuOpen ? `${40 * navigationLinks.indexOf(link)}ms` : "0ms",
+                      transitionDelay: isMenuOpen
+                        ? `${40 * navigationLinks.indexOf(link)}ms`
+                        : "0ms",
                     }}
                     tabIndex={isMenuOpen ? 0 : -1}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>

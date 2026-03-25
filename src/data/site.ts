@@ -34,11 +34,11 @@ export type FooterGroup = {
 };
 
 export const navigationLinks: NavLink[] = [
-  { href: "#install", label: "Overview" },
-  { href: "#categories", label: "Getting Started" },
-  { href: "#fast", label: "Examples" },
-  { href: "#expressive", label: "Syntax" },
-  { href: "#open-source", label: "Open Source" },
+  { href: "/", label: "Overview" },
+  { href: "/docs", label: "Docs" },
+  { href: "/docs/examples", label: "Examples" },
+  { href: "/docs/syntax", label: "Syntax" },
+  { href: "/install", label: "Install" },
 ];
 
 export const categories: Category[] = [
@@ -63,10 +63,10 @@ export const categories: Category[] = [
 ];
 
 export const categoryLinks: NavLink[] = [
-  { href: "#fast", label: "Hello world" },
-  { href: "#expressive", label: "Variables" },
-  { href: "#safe", label: "Structs" },
-  { href: "#adaptable", label: "Real app" },
+  { href: "/docs/examples", label: "Hello world" },
+  { href: "/docs/syntax", label: "Variables" },
+  { href: "/docs/syntax", label: "Structs" },
+  { href: "/docs/examples", label: "Real app" },
 ];
 
 export const featureSections: FeatureSectionData[] = [
@@ -130,7 +130,7 @@ type hk_color {
     codeSource: "SokolGfxKira/Sources/main.kira",
     code: String.raw`@Main
 function main() {
-    print("Launching Sokol triangle (pure Kira)…")
+    print("Launching Sokol triangle (pure Kira)...")
     sapp_run(desc: sapp_desc(
         init_cb: on_init,
         frame_cb: on_frame,
@@ -180,9 +180,9 @@ export const footerGroups: FooterGroup[] = [
   {
     title: "Tools",
     links: [
-      { href: "#install", label: "kira CLI" },
-      { href: "#categories", label: "examples" },
-      { href: "#open-source", label: "kira-lsp" },
+      { href: "/install", label: "kira CLI" },
+      { href: "/docs/examples", label: "examples" },
+      { href: "/docs", label: "kira-lsp" },
     ],
   },
 ];
