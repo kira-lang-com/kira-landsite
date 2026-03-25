@@ -18,7 +18,7 @@ export function SiteNav() {
           >
             <KiraLogo />
             <span className="font-display text-2xl font-bold tracking-[-0.04em]">
-              Kira
+              
             </span>
           </a>
 

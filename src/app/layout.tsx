@@ -8,10 +8,50 @@ const manrope = Manrope({
   variable: "--font-manrope",
 });
 
+const siteName = "Kira";
+const siteDescription =
+  "Kira is a powerful, flexible, multiplatform programming language built for speed, expressiveness, and safety.";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+
 export const metadata: Metadata = {
-  title: "Kira",
-  description:
-    "A polished Kira language landing page built with Next.js, Bun, and Tailwind CSS.",
+  title: {
+    default: siteName,
+    template: `%s | ${siteName}`,
+  },
+  description: siteDescription,
+  keywords: [
+    "Kira",
+    "Kira language",
+    "programming language",
+    "systems programming",
+    "cross-platform language",
+    "safe programming language",
+    "fast programming language",
+  ],
+  applicationName: siteName,
+  authors: [{ name: "Kira Language Project" }],
+  creator: "Kira Language Project",
+  publisher: "Kira Language Project",
+  category: "technology",
+  metadataBase: siteUrl ? new URL(siteUrl) : undefined,
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  icons: {
+    icon: "/KiraIconLightRounded.ico",
+    shortcut: "/KiraIconLightRounded.ico",
+  },
 };
 
 export default function RootLayout({

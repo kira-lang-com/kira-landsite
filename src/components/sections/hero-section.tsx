@@ -3,7 +3,6 @@ import { ChevronRight } from "lucide-react";
 export function HeroSection() {
   return (
     <section
-      id="install"
       className="relative flex min-h-[calc(100dvh-4rem)] items-center overflow-hidden bg-[#f4e6d3] px-6 pb-28 pt-20 text-center md:pb-36 md:pt-24"
     >
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[15rem] md:h-[24rem]">
@@ -56,26 +55,23 @@ export function HeroSection() {
       <div className="absolute bottom-6 right-[10%] h-24 w-24 rounded-full bg-[#e45a32]/12 blur-3xl md:bottom-10 md:h-36 md:w-36" />
 
       <div className="relative z-10 mx-auto w-full max-w-5xl pt-10 md:pt-14">
-        <p className="mb-6 inline-flex rounded-full border border-[#e2cca9] bg-white/55 px-4 py-2 text-sm font-semibold uppercase tracking-[0.25em] text-[#8e4a2d] shadow-[0_0_18px_rgba(255,255,255,0.32)]">
-          A language you can read quickly
-        </p>
-        <h1 className="balance-text font-display text-5xl font-bold leading-[1.03] tracking-[0.001em] text-[#333] md:text-7xl md:leading-[1.01] md:tracking-[0.003em]">
-          Kira is designed to feel simple first, while still growing into real apps.
+        <h1 className="balance-text mx-auto max-w-4xl font-display text-4xl font-bold leading-[1.04] tracking-[0.001em] text-[#333] md:text-6xl md:leading-[1.02] md:tracking-[0.003em]">
+          Kira is the powerful, flexible, multiplatform programming language.
         </h1>
         <p className="mx-auto mt-8 max-w-2xl text-2xl font-medium text-[#1d1d1f]/70 md:text-3xl">
-          The examples below are real Kira code from the repo, chosen to show how approachable the language feels day to day.
+          Fast. Expressive. Safe.
         </p>
 
         <div className="mt-12 flex flex-col items-center gap-6 md:mt-14">
           <a
-            href="#fast"
+            href="#install"
             className="inline-flex items-center gap-3 rounded-[2rem] bg-gradient-to-b from-[#f38d5b] to-[#e45a32] px-10 py-5 text-2xl font-semibold text-[#2f140d] shadow-[0_24px_70px_-24px_rgba(228,90,50,0.8)] transition-transform duration-300 hover:-translate-y-1 md:px-20 md:text-3xl"
           >
-            Read the examples
+            Install
             <ChevronRight size={28} />
           </a>
           <p className="text-lg font-medium text-[#8e8e93]">
-            Small programs, clear syntax, and one real app sample
+            Tools for Linux, macOS, and Windows
           </p>
         </div>
       </div>

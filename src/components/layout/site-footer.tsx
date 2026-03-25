@@ -9,7 +9,7 @@ export function SiteFooter() {
           <div className="mb-12 flex items-center gap-3 text-white">
             <KiraLogo className="h-12 w-12" />
             <span className="font-display text-3xl font-bold tracking-[-0.04em]">
-              Kira
+              
             </span>
           </div>
 

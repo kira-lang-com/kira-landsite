@@ -20,6 +20,14 @@ export type FeatureSectionData = {
   title: string;
 };
 
+export type InstallPlatform = {
+  command: string;
+  description: string;
+  id: "macos" | "linux" | "windows";
+  label: string;
+  note: string;
+};
+
 export type FooterGroup = {
   links: NavLink[];
   title?: string;
@@ -132,6 +140,36 @@ function main() {
         window_title: "Sokol Triangle (Kira)"))
 }`,
     sectionClassName: "border-t border-black/5 bg-[#f4e6d3]",
+  },
+];
+
+export const installPlatforms: InstallPlatform[] = [
+  {
+    id: "macos",
+    label: "macOS",
+    description:
+      "Use Homebrew for the cleanest setup and keep the compiler on your normal PATH.",
+    command: String.raw`brew tap kira-lang-com/kira
+brew install kira`,
+    note: "Requires Homebrew. Then run `kira --version` to verify the install.",
+  },
+  {
+    id: "linux",
+    label: "Linux",
+    description:
+      "Run the shell installer to fetch the latest release and place the binary in your local toolchain path.",
+    command: String.raw`curl -fsSL https://install.kira.sh | sh
+export PATH="$HOME/.kira/bin:$PATH"`,
+    note: "Works well on Ubuntu, Fedora, Arch, and other modern distributions.",
+  },
+  {
+    id: "windows",
+    label: "Windows",
+    description:
+      "Install with PowerShell, then restart your terminal so the Kira executable is available everywhere.",
+    command: String.raw`powershell -ExecutionPolicy Bypass -c "irm https://install.kira.sh/windows | iex"
+kira --version`,
+    note: "Use PowerShell 7+ if possible for the smoothest install experience.",
   },
 ];
 
