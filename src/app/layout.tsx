@@ -37,6 +37,28 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "/",
+    siteName,
+    title: siteName,
+    description: siteDescription,
+    images: [
+      {
+        url: "/KiraNameIcon.png",
+        width: 1200,
+        height: 630,
+        alt: "Kira programming language",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteName,
+    description: siteDescription,
+    images: ["/KiraNameIcon.png"],
+  },
   robots: {
     index: true,
     follow: true,
