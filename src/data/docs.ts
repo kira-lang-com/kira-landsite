@@ -21,6 +21,11 @@ export const docsPageLinks: DocsPageLink[] = [
     description: "Walk through real snippets adapted from the Kira repository.",
   },
   {
+    href: "/docs/packages",
+    title: "Packages",
+    description: "Learn the lockfile, Foundation, registry, path, and pinned git workflow.",
+  },
+  {
     href: "/install",
     title: "Install guide",
     description: "Platform-specific instructions for macOS, Linux, and Windows.",

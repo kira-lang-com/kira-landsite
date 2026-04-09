@@ -23,7 +23,7 @@ export default function DocsPage() {
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-[#1d1d1f]/72 md:text-xl">
             This docs area gives you a focused way to explore installation,
-            syntax, examples, and the language workflow.
+            syntax, packages, examples, and the language workflow.
           </p>
           <div className="mt-10">
             <DocsGrid links={docsPageLinks} />
@@ -54,12 +54,12 @@ export default function DocsPage() {
 
             <article className="rounded-[2rem] bg-white/55 p-7 shadow-[0_24px_70px_-40px_rgba(29,29,31,0.35)]">
               <h2 className="font-display text-2xl font-bold text-[#1d1d1f]">
-                3. Study examples
+                3. Learn packages
               </h2>
               <p className="mt-3 text-base leading-relaxed text-[#1d1d1f]/72">
-                Finish with the examples page. It connects the syntax guide to
-                real code so you can see how small snippets grow into actual
-                programs and apps.
+                Once the basics feel familiar, read the packages guide. It
+                covers the bundled Foundation package, exact registry versions,
+                pinned git dependencies, and lockfile-backed builds.
               </p>
             </article>
           </div>

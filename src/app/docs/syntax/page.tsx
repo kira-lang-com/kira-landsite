@@ -80,6 +80,23 @@ type hk_color {
             fields in one place, which helps you move from tiny examples to
             application code without changing your mental model.
           </p>
+          <CodeBlock
+            label="Printing a named struct"
+            sourcePath="examples/hello/app/main.kira"
+            code={`import Foundation
+
+@Main
+function main() {
+    let color = Color(r: 255, g: 0, b: 0)
+    print(color)
+    return
+}`}
+          />
+          <p className="text-base leading-relaxed text-[#1d1d1f]/72">
+            On the default VM path, Kira now formats named struct values for
+            `print(...)`. Native and hybrid backends still have a narrower print
+            surface while their runtime support catches up.
+          </p>
         </div>
       </section>
     </PageShell>

@@ -38,7 +38,8 @@ export default function InstallPage() {
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[#1d1d1f]/72 md:text-xl">
             Choose your platform below, run the installation command, and
-            confirm the toolchain is available in your shell.
+            confirm the toolchain is available in your shell. Every managed
+            install now also bundles the Foundation package automatically.
           </p>
           <InstallTabs />
 

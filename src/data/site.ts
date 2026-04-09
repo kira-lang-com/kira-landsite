@@ -36,6 +36,7 @@ export type FooterGroup = {
 export const navigationLinks: NavLink[] = [
   { href: "/", label: "Overview" },
   { href: "/docs", label: "Docs" },
+  { href: "/docs/packages", label: "Packages" },
   { href: "/docs/examples", label: "Examples" },
   { href: "/docs/syntax", label: "Syntax" },
   { href: "/install", label: "Install" },
@@ -52,7 +53,7 @@ export const categories: Category[] = [
     icon: "cloud",
     title: "Easy to use",
     description:
-      "You can start with tiny scripts and simple apps, then keep growing into packages, tooling, and native interop without switching languages.",
+      "You can start with tiny scripts and simple apps, then keep growing into packages, Foundation modules, tooling, and native interop without switching languages.",
   },
   {
     icon: "cpu",
@@ -123,22 +124,18 @@ type hk_color {
   {
     id: "adaptable",
     title: "Capable",
-    subtitle: "When you are ready, the same language scales up.",
+    subtitle: "When you are ready, the same language scales up into real packages and apps.",
     description:
-      "The repo also includes a real graphics sample written in Kira. You can stay with friendly syntax and still grow into native app code when the project gets bigger.",
+      "Kira now includes a real package workflow with a bundled Foundation package, exact-version registry installs, local paths, pinned git dependencies, and lockfile-backed builds.",
     codeLabel: "Launching the Sokol sample",
-    codeSource: "SokolGfxKira/Sources/main.kira",
-    code: String.raw`@Main
-function main() {
-    print("Launching Sokol triangle (pure Kira)...")
-    sapp_run(desc: sapp_desc(
-        init_cb: on_init,
-        frame_cb: on_frame,
-        cleanup_cb: on_cleanup,
-        width: 800,
-        height: 600,
-        window_title: "Sokol Triangle (Kira)"))
-}`,
+    codeSource: "kira package workflow",
+    code: String.raw`[dependencies]
+FrostUI = "0.1.0"
+GameKit = { git = "https://github.com/Sunlight-Horizon/GameKit.git", rev = "a1b2c3d4" }
+
+kira sync
+kira add FrostUI
+kira package pack`,
     sectionClassName: "border-t border-black/5 bg-[#f4e6d3]",
   },
 ];

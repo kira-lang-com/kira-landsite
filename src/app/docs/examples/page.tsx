@@ -25,6 +25,18 @@ export default function ExamplesPage() {
             the style and the kind of code you will write day to day.
           </p>
 
+          <div className="mt-10 rounded-[2rem] bg-[#dff0f6]/70 p-7">
+            <h2 className="font-display text-2xl font-bold text-[#1d1d1f]">
+              What the current runtime shows well
+            </h2>
+            <p className="mt-3 text-base leading-relaxed text-[#1d1d1f]/72">
+              The default VM path now prints richer values than the earlier
+              bootstrap subset, including named struct values. That makes the
+              examples page a better reflection of what a local `kira run`
+              session looks like today.
+            </p>
+          </div>
+
           <div className="mt-10 rounded-[2rem] bg-white/70 p-7 shadow-[0_24px_70px_-40px_rgba(29,29,31,0.25)]">
             <h2 className="font-display text-2xl font-bold text-[#1d1d1f]">
               How to use these examples
@@ -49,6 +61,23 @@ function main() {
             This is the shortest useful mental model: an entry point, one
             function body, and a print statement. If this reads comfortably,
             you already understand the tone of the language.
+          </p>
+          <CodeBlock
+            label="Foundation-backed printing"
+            sourcePath="examples/hello/app/main.kira"
+            code={`import Foundation
+
+@Main
+function main() {
+    let color = Color(r: 255, g: 0, b: 0)
+    print(color)
+    return
+}`}
+          />
+          <p className="text-base leading-relaxed text-[#1d1d1f]/72">
+            The bundled Foundation package is available automatically, so
+            `import Foundation` works without declaring a dependency first in a
+            normal managed install.
           </p>
           <CodeBlock
             label="Sokol triangle app"
